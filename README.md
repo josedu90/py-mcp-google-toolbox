@@ -3,8 +3,8 @@
 
 An MCP server that provides AI assistants with powerful tools to interact with Google services, including Gmail, Google Calendar, Google Drive, and Google Search.
 
-<a href="https://glama.ai/mcp/servers/py-mcp-google-toolbox">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/py-mcp-google-toolbox/badge" alt="py-mcp-google-toolbox MCP server" />
+<a href="https://glama.ai/mcp/servers/@jikime/py-mcp-google-toolbox">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jikime/py-mcp-google-toolbox/badge" alt="Google Toolbox MCP server" />
 </a>
 
 ## Overview
