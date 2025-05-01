@@ -1,0 +1,11 @@
+# Python-generated files
+__pycache__/
+
+# Virtual environments
+.venv
+uv.lock
+.python-version
+.env
+logs
+token.json
+credentials.json

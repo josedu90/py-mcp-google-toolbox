@@ -1,0 +1,49 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - googleApiKey
+      - googleCseId
+      - googleClientId
+      - googleClientSecret
+      - googleRefreshToken
+    properties:
+      googleApiKey:
+        type: string
+        description: Google API Key
+      googleCseId:
+        type: string
+        description: Google Custom Search Engine ID
+      googleRefreshToken:
+        type: string
+        description: Google Refresh Token
+      googleClientId:
+        type: string
+        description: Google Client ID
+      googleClientSecret:
+        type: string
+        description: Google Client Secret
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['server.py'],
+      env: {
+        GOOGLE_API_KEY: config.googleApiKey,
+        GOOGLE_CSE_ID: config.googleCseId,
+        GOOGLE_CLIENT_ID: config.googleClientId,
+        GOOGLE_CLIENT_SECRET: config.googleClientSecret,
+        GOOGLE_REFRESH_TOKEN: config.googleRefreshToken
+      }
+    })
+  exampleConfig:
+    googleApiKey: your_google_api_key_here
+    googleCseId: your_custom_search_engine_id_here
+    googleClientId: your_google_client_id_here
+    googleClientSecret: your_google_client_secret_here
+    googleRefreshToken: your_google_refresh_token_here
