@@ -11,11 +11,11 @@ COPY . .
 RUN pip install --no-cache-dir google google-api-python-client google-auth-httplib2 google-auth-oauthlib mcp[cli] pydantic python-dotenv pydantic[email]
 
 # Set environment variables placeholders (they will be overridden by startCommand config)
-ENV GOOGLE_API_KEY=changeme
-ENV GOOGLE_CSE_ID=changeme
-ENV GOOGLE_CLIENT_ID=changeme
-ENV GOOGLE_CLIENT_SECRET=changeme
-ENV GOOGLE_REFRESH_TOKEN=changeme
+ENV GOOGLE_API_KEY=your_google_api_key
+ENV GOOGLE_CSE_ID=your_custom_search_engine_id
+ENV GOOGLE_CLIENT_ID=your_google_client_id
+ENV GOOGLE_CLIENT_SECRET=your_google_client_secret
+ENV GOOGLE_REFRESH_TOKEN=your_google_refresh_token
 
 # Command to run the MCP server
 CMD ["python", "server.py"]

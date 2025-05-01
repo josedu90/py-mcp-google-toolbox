@@ -1,5 +1,5 @@
 # py-mcp-google-toolbox
-[![smithery badge](https://smithery.ai/badge/py-mcp-google-toolbox)](https://smithery.ai/server/py-mcp-google-toolbox) ![](https://badge.mcpx.dev?type=server 'MCP Server') ![Version](https://img.shields.io/badge/version-1.1.10-green) ![License](https://img.shields.io/badge/license-MIT-blue)
+[![smithery badge](https://smithery.ai/badge/@jikime/py-mcp-google-toolbox)](https://smithery.ai/server/@jikime/py-mcp-google-toolbox) ![](https://badge.mcpx.dev?type=server 'MCP Server') ![Version](https://img.shields.io/badge/version-1.1.10-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 An MCP server that provides AI assistants with powerful tools to interact with Google services, including Gmail, Google Calendar, Google Drive, and Google Search.
 
@@ -52,15 +52,6 @@ py-mcp-google-toolbox provides the following Google-related functionalities:
 3. Go to [Custom Search Engine](https://cse.google.com/cse/all) and get its ID
 
 ## Installation
-### Installing via Smithery
-
-To install py-mcp-google-toolbox for Claude Desktop automatically via [Smithery](https://smithery.ai/server/py-mcp-google-toolbox):
-
-```bash
-npx -y @smithery/cli install py-mcp-google-toolbox --client claude
-```
-
-### Local Setup
 #### Git Clone
 ```bash
 git clone https://github.com/jikime/py-mcp-google-toolbox.git
@@ -133,13 +124,20 @@ docker run py-mcp-google-toolbox
 
 1. Run the server:
 ```bash
-uv run server.py
+mcp dev server.py
 ```
 
 ## Configure MCP Settings
 Add the server configuration to your MCP settings file:
 
 #### Claude desktop app 
+1. To install automatically via [Smithery](https://smithery.ai/server/py-mcp-google-toolbox):
+
+```bash
+npx -y @smithery/cli install py-mcp-google-toolbox --client claude
+```
+
+2. To install manually
 open `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 Add this to the `mcpServers` object:
