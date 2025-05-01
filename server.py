@@ -105,7 +105,6 @@ SCOPES = [
     'https://www.googleapis.com/auth/gmail.send',
     'https://www.googleapis.com/auth/gmail.modify',
     'https://www.googleapis.com/auth/calendar',
-    'https://www.googleapis.com/auth/drive',
     'https://www.googleapis.com/auth/drive.file',
     'https://www.googleapis.com/auth/drive.readonly',
 ]
@@ -146,7 +145,7 @@ def get_google_credentials() -> Optional[Credentials]:
                     client_id=GOOGLE_CLIENT_ID,
                     client_secret=GOOGLE_CLIENT_SECRET,
                     scopes=SCOPES
-                )
+                ) 
                 creds.refresh(Request())
                 with open(TOKEN_FILE, 'w') as token:
                     token.write(creds.to_json())
