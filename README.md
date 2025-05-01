@@ -131,10 +131,10 @@ mcp dev server.py
 Add the server configuration to your MCP settings file:
 
 #### Claude desktop app 
-1. To install automatically via [Smithery](https://smithery.ai/server/py-mcp-google-toolbox):
+1. To install automatically via [Smithery](https://smithery.ai/server/@jikime/py-mcp-google-toolbox):
 
 ```bash
-npx -y @smithery/cli install py-mcp-google-toolbox --client claude
+npx -y @smithery/cli install @jikime/py-mcp-google-toolbox --client claude
 ```
 
 2. To install manually
