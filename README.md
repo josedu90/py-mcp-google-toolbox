@@ -124,6 +124,10 @@ docker run py-mcp-google-toolbox
 
 1. Run the server:
 ```bash
+mcp run server.py
+```
+2. Run the MCP Inspector
+```bash
 mcp dev server.py
 ```
 

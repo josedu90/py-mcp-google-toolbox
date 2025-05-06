@@ -191,7 +191,7 @@ def _get_email_body(payload: Dict[str, Any]) -> str:
 
 # --- MCP Resource 정의 ---
 @mcp.resource(
-  uri='http://localhost:8000/available-google-tools', 
+  uri='google://available-google-tools', 
   name="available-google-tools", 
   description="Returns a list of Google search categories available on this MCP server."
 )
